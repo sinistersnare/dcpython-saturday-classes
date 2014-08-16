@@ -1,3 +1,8 @@
+"""
+    This program calculates change through the make_change function
+
+"""
+
 def make_change(amount_chg):
     # input amount of change to make_change
     # return the minimun number of coin to make change
