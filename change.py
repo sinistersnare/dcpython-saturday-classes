@@ -1,7 +1,13 @@
+#!/usr/bin/env python
+
+# http://en.wikipedia.org/wiki/Shebang_(Unix)
+
 """
     This program calculates change through the make_change function
 
 """
+
+import sys
 
 def make_change(amount_chg):
     # input amount of change to make_change
@@ -32,11 +38,10 @@ def process_change(balance, denom):
     return (number_denom, balance)
 
 if __name__=='__main__':
-    list1 = make_change(105)
+    prog_args = sys.argv
+
+    list1 = make_change(int(prog_args[1]))
     returninfo = []
     for element in list1:
         returninfo.append(element[0])
     print "{} Quarters, {} Dimes, {} Nickels, {} Pennies".format(*returninfo)
-
-    #make_change(99)
-    #process_change(99,25)
